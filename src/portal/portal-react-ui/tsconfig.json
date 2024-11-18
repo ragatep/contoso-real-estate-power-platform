@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "ES2019",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "lib": ["ES2020", "DOM"],
+    "strict": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": true,
+    "isolatedModules": true,
+    "typeRoots": ["node_modules/@types"],
+  },
+  "include": ["./src/**/**/*", "types/global.d.ts"],
+  "exclude": ["./node_modules"]
+}

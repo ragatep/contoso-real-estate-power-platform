@@ -1,0 +1,14 @@
+{
+  "$kind": "BotConfiguration",
+  "settings": {
+    "AddBingDataSourceForPowerPages": false,
+    "GenerativeActionsEnabled": true
+  },
+  "aISettings": {
+    "$kind": "AISettings",
+    "useModelKnowledge": false
+  },
+  "recognizer": {
+    "$kind": "GenerativeAIRecognizer"
+  }
+}

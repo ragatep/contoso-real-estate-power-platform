@@ -1,0 +1,13 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# msbuild output directories
+/bin
+/obj
+
+# MSBuild Binary and Structured Log
+*.binlog
+# Exclude the React Portal UI from the solution because this is built during the build process
+/src/powerpagecomponents/*/filecontent/portal-ui-bundle.js
+
+Metadata
+SolutionPackagerLogs

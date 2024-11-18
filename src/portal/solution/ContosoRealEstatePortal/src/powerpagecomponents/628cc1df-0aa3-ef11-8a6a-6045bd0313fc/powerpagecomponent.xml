@@ -1,0 +1,20 @@
+<powerpagecomponent powerpagecomponentid="628cc1df-0aa3-ef11-8a6a-6045bd0313fc">
+  <content>{
+  "title": "portal-ui-bundle.js",
+  "partialurl": "portal-ui-bundle.js",
+  "excludefromsearch": false,
+  "hiddenfromsitemap": false,
+  "contentdisposition": 756150000,
+  "publishingstateid": "3de66291-24a2-45a8-8ed9-3714e0e9d453",
+  "parentpageid": "72039cc9-7b49-4773-91e6-9820290aecce"
+}</content>
+  <filecontent mimetype="application/javascript">portal-ui-bundle.js</filecontent>
+  <iscustomizable>1</iscustomizable>
+  <name>portal-ui-bundle.js</name>
+  <powerpagecomponenttype>3</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>
