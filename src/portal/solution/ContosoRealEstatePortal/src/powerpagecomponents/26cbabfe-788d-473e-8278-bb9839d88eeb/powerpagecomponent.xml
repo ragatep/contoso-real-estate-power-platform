@@ -1,0 +1,13 @@
+<powerpagecomponent powerpagecomponentid="26cbabfe-788d-473e-8278-bb9839d88eeb">
+  <content>{
+  "value": "nosniff"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>HTTP/X-Content-Type-Options</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

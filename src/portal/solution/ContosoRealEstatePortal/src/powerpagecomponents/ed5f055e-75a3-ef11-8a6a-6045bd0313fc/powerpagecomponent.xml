@@ -1,0 +1,14 @@
+<powerpagecomponent powerpagecomponentid="ed5f055e-75a3-ef11-8a6a-6045bd0313fc">
+  <content>{
+  "description": "See https://learn.microsoft.com/en-us/power-pages/security/site-checker-security?WT.mc_id=powerportals_inproduct_portalstudio2#http-headers",
+  "value": "script-src https: 'nonce'"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>*HTTP/Content-Security-Policy</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

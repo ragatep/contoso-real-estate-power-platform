@@ -1,0 +1,9 @@
+<customapirequestparameter uniquename="FromDate">
+  <displayname default="From Date">
+    <label description="From Date" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>FromDate</name>
+  <type>1</type>
+</customapirequestparameter>

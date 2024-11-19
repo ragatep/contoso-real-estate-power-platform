@@ -1,0 +1,9 @@
+<customapirequestparameter uniquename="ToDate">
+  <displayname default="To Date">
+    <label description="To Date" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>ToDate</name>
+  <type>1</type>
+</customapirequestparameter>

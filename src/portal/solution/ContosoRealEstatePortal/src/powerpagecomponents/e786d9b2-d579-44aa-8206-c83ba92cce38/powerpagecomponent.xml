@@ -1,0 +1,13 @@
+<powerpagecomponent powerpagecomponentid="e786d9b2-d579-44aa-8206-c83ba92cce38">
+  <content>{
+  "value": "Microsoft Entra ID"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Authentication/OpenIdConnect/AzureAD/Caption</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>20f5d326-50b3-492b-aa2f-b29c913c932a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>
