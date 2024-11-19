@@ -149,7 +149,7 @@ public class StripeFunctions
             var json = await new StreamReader(req.Body).ReadToEndAsync();
             var signature = req.Headers["Stripe-Signature"];
             var webhookSecret = _configuration["StripeWebhookSecret"];
-            _log.LogInformation("Webhook secret={0}****, Signature={1}", webhookSecret?[..8], signature);
+            _log.LogInformation("Webhook secret={0}****", webhookSecret?[..8]);
             var stripeEvent = EventUtility.ConstructEvent(json, signature, webhookSecret);
 
             if (stripeEvent == null)
@@ -165,7 +165,7 @@ public class StripeFunctions
                 case Events.CheckoutSessionAsyncPaymentFailed:
                 case Events.CheckoutSessionExpired:
                     var session = stripeEvent.Data.Object as Session;
-                    _log.LogInformation($"Checkout session completed: clientReferenceId:{session.ClientReferenceId} Id:{session.Id}");
+                    _log.LogInformation($"Checkout session completed");
                     // Handle successful checkout session completion
                     // Create the payment in the back end by creating a payment function object and calling create payment
                     ILogger<PaymentFunction> paymentLogger = _loggerFactory.CreateLogger<PaymentFunction>();
@@ -191,7 +191,8 @@ public class StripeFunctions
                     break;
                 // Handle other event types as needed
                 default:
-                    _log.LogWarning($"Unhandled event type: {stripeEvent.Type}");
+                    var sanitizedEventType = stripeEvent.Type.Replace("\n", "").Replace("\r", "").Replace("\t", "");
+                    _log.LogWarning($"Unhandled event type: {sanitizedEventType}");
                     break;
             }
 
