@@ -586,7 +586,7 @@ To deploy the Portal solution, perform the following steps:
 
 1. Drag into the terminal the script at `src\portal\solution\deployment-scripts\deploy-to-development-environment.ps1`, press Enter, and follow the instructions carefully.
 
-1. You will be prompted to download the Custom Controls and Core **managed** solutions from the repo and place into the temp_release folder location given.
+1. You will be prompted to download the latest [Custom Controls managed](https://github.com/microsoft/contoso-real-estate-power-platform/releases?q=ContosoRealEstateCustomControls&expanded=true) and [Core managed](https://github.com/microsoft/contoso-real-estate-power-platform/releases?q=ContosoRealEstateCore&expanded=true) solutions from [releases](https://github.com/microsoft/contoso-real-estate-power-platform/releases) and place into the temp_release folder location given.
 
 1. The Portal solution will be built locally
 
