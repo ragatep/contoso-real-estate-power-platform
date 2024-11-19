@@ -458,7 +458,7 @@ In this workshop we will use option 1 because it will automatically assign a dev
     azd up --environment development
     ```
 
-    The `environment` parameter would normally be the Power Platform environment that is being deployed to e.g. `elaiza-dev1` `UAT` `PROD`
+    The `environment` parameter would normally be the environment that is being deployed to e.g. `elaiza-dev1` `UAT` `PROD`
 
 1. When asked if you want to create the Environment, press 'Y'.
 
@@ -519,7 +519,7 @@ The Core development environment has the custom controls solution deployed as ma
 
 1. Inside **VSCode**, drag the script located at `src\core\solution\deployment-scripts\1-deploy-to-development-environment.ps1` into the PowerShell terminal window, and press **Enter** to execute it
 
-1. Follow the instructions when running the script carefully. You will need to select the Azure environment that you deployed using azd up, then download the `ContosoRealEstateCustomControls_managed.zip` solution into the `temp_releases` folder using the path given.
+1. Follow the instructions when running the script carefully. You will need to select the Azure environment that you deployed using azd up, then download the latest `ContosoRealEstateCustomControls_managed.zip` solution from [releases](https://github.com/microsoft/contoso-real-estate-power-platform/releases?q=ContosoRealEstateCustomControls&expanded=true) and save into the `temp_releases` folder using the path given.
 
 > [!NOTE]
 >
