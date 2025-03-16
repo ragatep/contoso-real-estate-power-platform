@@ -16,7 +16,7 @@
           "connectionReferenceLogicalName": "contoso_StripeAPI"
         },
         "api": {
-          "name": "shared_contoso-5fcontoso-20stripe-20api-5f6a4f91c8025d1333",
+          "name": "shared_contoso-5fcontoso-20stripe-20api-5ffda53e5248902c45",
           "logicalName": "contoso_contoso-20stripe-20api"
         }
       }
@@ -149,7 +149,7 @@
                         "host": {
                           "connectionName": "shared_contoso-5fcontoso-20stripe-20api-5f9fd17285088bf5cb",
                           "operationId": "CreateCheckoutSession",
-                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_contoso-5fcontoso-20stripe-20api-5f6a4f91c8025d1333"
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_contoso-5fcontoso-20stripe-20api-5ffda53e5248902c45"
                         },
                         "parameters": {
                           "body/ClientReferenceNumber": "portal-reservation-",

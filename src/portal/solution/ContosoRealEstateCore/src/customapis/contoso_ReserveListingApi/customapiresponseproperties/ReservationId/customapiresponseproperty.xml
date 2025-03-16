@@ -1,0 +1,8 @@
+<customapiresponseproperty uniquename="ReservationId">
+  <displayname default="ReservationId">
+    <label description="ReservationId" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <name>ReservationId</name>
+  <type>12</type>
+</customapiresponseproperty>

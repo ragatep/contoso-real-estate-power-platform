@@ -1,10 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24101.198" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.24102.00190">
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25022.202" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25022.00204">
   <Entities />
   <Roles />
   <Workflows />
   <FieldSecurityProfiles />
   <Templates />
+  <EntityImageConfigs>
+    <EntityImageConfig>
+      <parententitylogicalname>contoso_listing</parententitylogicalname>
+      <primaryimageattribute>contoso_image</primaryimageattribute>
+    </EntityImageConfig>
+  </EntityImageConfigs>
   <EntityMaps />
   <EntityRelationships />
   <OrganizationSettings />
@@ -71,7 +77,7 @@
     </connectionreference>
     <connectionreference connectionreferencelogicalname="contoso_StripeAPI">
       <connectionreferencedisplayname>Contoso Real Estate Stripe API Functions</connectionreferencedisplayname>
-      <connectorid>/providers/Microsoft.PowerApps/apis/shared_contoso-5fcontoso-20stripe-20api-5f6a4f91c8025d1333</connectorid>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_contoso-5fcontoso-20stripe-20api-5ffda53e5248902c45</connectorid>
       <customconnectorid>
         <connectorid>40698eb9-0663-43a9-ac72-9ef1a635570b</connectorid>
       </customconnectorid>

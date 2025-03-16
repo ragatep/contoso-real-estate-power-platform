@@ -1,0 +1,12 @@
+{
+  "fxexpression": {
+    "@uniquename": "contoso_ReserveListing",
+    "category": "0",
+    "context": "{\"Tables\":[\"contoso_listing\",\"contoso_reservation\",\"contoso_listingfee\",\"contact\"],\"CustomApis\":[],\"ConnectionReferences\":[],\"TabularConnectionReferences\":[],\"ActionConnectorConnectionReferences\":[]}",
+    "iscustomizable": "1",
+    "name": "Reserve Listing",
+    "parameters": "{\"InputParameter\":[{\"isOptional\":0,\"name\":\"To\",\"type\":10},{\"isOptional\":0,\"name\":\"ListingID\",\"type\":10},{\"isOptional\":0,\"name\":\"From\",\"type\":10},{\"isOptional\":0,\"name\":\"DataverseUserId\",\"type\":10},{\"isOptional\":0,\"name\":\"Guests\",\"type\":7}],\"OutputParameter\":[{\"name\":\"ReservationNumber\",\"type\":10},{\"name\":\"Amount\",\"type\":2},{\"name\":\"ReservationId\",\"type\":10}]}",
+    "statecode": "0",
+    "statuscode": "1"
+  }
+}

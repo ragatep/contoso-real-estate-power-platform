@@ -1,6 +1,6 @@
 <bot schemaname="contoso_3c237b1a-7213-4759-b062-c6294730ec77">
   <authenticationconfiguration>{
-  "connectionName": "8e1624c2-2ceb-45ab-a9e4-10c9228a3ddc"
+  "connectionName": "1f928b3e-5310-4082-af2e-3f951f200138"
 }</authenticationconfiguration>
   <authenticationmode>4</authenticationmode>
   <authenticationtrigger>1</authenticationtrigger>
@@ -13,20 +13,24 @@
   "contentVersion": 2,
   "lastFinishedPublishOperation": {
     "$kind": "PublishResultDetails",
-    "operationStart": "2024-11-16T04:16:07.0041308Z",
-    "operationEnd": "2024-11-16T04:16:28.8488491Z",
+    "operationStart": "2025-03-15T20:45:52.6143863Z",
+    "operationEnd": "2025-03-15T20:46:19.759549Z",
     "status": "Succeeded"
+  },
+  "lastPublishedDetails": {
+    "$kind": "SuccessfulPublishResultDetails",
+    "authenticationMode": "GenericOAuth2"
   },
   "currentSynchronizationState": {
     "botRegistration": {
-      "botRegistrationIdConsumptionTime": "2024-08-22T22:27:45Z",
-      "applicationId": "35e5ad56-113d-41f5-9bc3-0dacfbda5b9f",
+      "botRegistrationIdConsumptionTime": "2025-03-15T20:45:42Z",
+      "applicationId": "aa775fba-0e58-4f62-bbcc-d9fddee2060e",
       "isAppAvailableInTenant": true
     },
     "provisioningStatus": "Provisioned",
     "state": "Synchronized"
   },
-  "lastSynchronizedOnUtc": "2024-11-16T04:17:32.2948226Z"
+  "lastSynchronizedOnUtc": "2025-03-15T20:46:56.9503457Z"
 }</synchronizationstatus>
   <template>powerpages-1.0.0</template>
   <timezoneruleversionnumber>4</timezoneruleversionnumber>

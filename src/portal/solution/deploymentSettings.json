@@ -28,7 +28,7 @@
     {
       "LogicalName": "contoso_StripeAPI",
       "ConnectionId": "",
-      "ConnectorId": "/providers/Microsoft.PowerApps/apis/shared_contoso-5fcontoso-20stripe-20api-5f6a4f91c8025d1333"
+      "ConnectorId": "/providers/Microsoft.PowerApps/apis/shared_contoso-5fcontoso-20stripe-20api-5ffda53e5248902c45"
     }
   ]
 }

@@ -1,0 +1,17 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# msbuild output directories
+/bin
+/obj
+
+# MSBuild Binary and Structured Log
+*.binlog
+
+# Exclude any assemblies
+*.dll
+
+Metadata
+SolutionPackagerLogs
+
+# Exclude the TypeScript generated javascript because this is built during the build process
+/src/WebResources/contoso_/portal-admin/mda-client-hooks.js

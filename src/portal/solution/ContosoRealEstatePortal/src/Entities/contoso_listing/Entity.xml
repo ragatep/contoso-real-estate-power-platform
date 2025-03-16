@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name LocalizedName="Listing" OriginalName="Listing">contoso_listing</Name>
+  <EntityInfo>
+    <entity Name="contoso_listing">
+      <attributes />
+    </entity>
+  </EntityInfo>
   <FormXml />
   <RibbonDiffXml />
 </Entity>
