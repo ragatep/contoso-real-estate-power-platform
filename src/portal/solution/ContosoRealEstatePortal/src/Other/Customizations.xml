@@ -9,7 +9,20 @@
   <EntityRelationships />
   <OrganizationSettings />
   <optionsets />
-  <CustomControls />
+  <CustomControls>
+    <CustomControl>
+      <Name>CustomControl-Contoso.PortalReactUI</Name>
+      <CustomControlId>{91b022b7-767e-4e31-8c2b-16317f0ce2b4}</CustomControlId>
+      <FileName>/Controls/PortalReactUI/bundle.js</FileName>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <ConstructorName>PortalReactUI</ConstructorName>
+      <DisplayName>Portal React UI</DisplayName>
+      <Description>Portal React UI Component</Description>
+      <Version>0.0.4</Version>
+      <Namespace>Contoso</Namespace>
+    </CustomControl>
+  </CustomControls>
   <EntityDataProviders />
   <AIModels>
     <AIModel>

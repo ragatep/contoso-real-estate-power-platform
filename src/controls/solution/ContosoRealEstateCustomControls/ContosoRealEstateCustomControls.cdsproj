@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\image-grid-pcf\image-grid-pcf.pcfproj" />
+    <ProjectReference Include="..\..\..\portal\PortalReactUI\PortalReactUI.pcfproj" />
   </ItemGroup>
   
   <ItemGroup>
