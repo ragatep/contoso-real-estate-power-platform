@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Row, Col, Form, Alert, Button, Spinner } from 'react-bootstrap';
 import DatePicker from 'react-datepicker';
-import { BsCartPlus, BsCalendar } from 'react-icons/bs';
+import { BsCartPlus } from 'react-icons/bs';
 import * as ReservationApi from '../api/listingsApi';
 import { ApiError } from '../api/apiErrors';
 import { navigateToPage } from '../api/navigation';
@@ -15,8 +15,8 @@ interface ReservationFormProps {
 const ReservationForm: React.FC<ReservationFormProps> = ({ listingId }) => {
     const [isReserving, setIsReserving] = React.useState(false);
     const [error, setError] = React.useState<string | null>(null);
-    const [startDate, setStartDate] = React.useState<Date | null>(null);
-    const [endDate, setEndDate] = React.useState<Date | null>(null);
+    const [startDate, setStartDate] = React.useState<Date | null>();
+    const [endDate, setEndDate] = React.useState<Date | null>();
     const [guests, setGuests] = React.useState<number>(1);
 
     async function reserve() {
@@ -53,19 +53,10 @@ const ReservationForm: React.FC<ReservationFormProps> = ({ listingId }) => {
                         selected={startDate}
                         onChange={(date: Date | null) => setStartDate(date)}
                         selectsStart
-                        startDate={startDate}
+                        startDate={startDate ?? undefined}
                         endDate={endDate}
-                        customInput={
-                            <div className="position-relative">
-                                <Form.Control type="text" />
-                                <div
-                                    className="position-absolute"
-                                    style={{ right: '10px', top: '50%', transform: 'translateY(-50%)' }}
-                                >
-                                    <BsCalendar />
-                                </div>
-                            </div>
-                        }
+                        showIcon
+                        icon
                         className="form-control"
                     />
                 </Col>
@@ -80,20 +71,11 @@ const ReservationForm: React.FC<ReservationFormProps> = ({ listingId }) => {
                         selected={endDate}
                         onChange={(date: Date | null) => setEndDate(date)}
                         selectsEnd
-                        startDate={startDate}
+                        startDate={startDate ?? undefined}
                         endDate={endDate}
                         minDate={startDate}
-                        customInput={
-                            <div className="position-relative">
-                                <Form.Control type="text" />
-                                <div
-                                    className="position-absolute"
-                                    style={{ right: '10px', top: '50%', transform: 'translateY(-50%)' }}
-                                >
-                                    <BsCalendar />
-                                </div>
-                            </div>
-                        }
+                        showIcon
+                        icon
                         className="form-control"
                     />
                 </Col>
