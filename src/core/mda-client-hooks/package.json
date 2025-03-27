@@ -22,7 +22,7 @@
     "@types/xrm": "^9.0.80",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
-    "@webpack-cli/generators": "^3.0.0",
+    "@webpack-cli/generators": "^3.0.7",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.26.0",

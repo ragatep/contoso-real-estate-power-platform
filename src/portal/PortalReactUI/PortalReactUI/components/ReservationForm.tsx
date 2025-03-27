@@ -1,12 +1,13 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
-import * as React from 'react';
+import React from 'react';
 import { Row, Col, Form, Alert, Button, Spinner } from 'react-bootstrap';
 import DatePicker from 'react-datepicker';
 import { BsCartPlus } from 'react-icons/bs';
 import * as ReservationApi from '../api/listingsApi';
 import { ApiError } from '../api/apiErrors';
 import { navigateToPage } from '../api/navigation';
+import 'react-datepicker/dist/react-datepicker.css';
 
 interface ReservationFormProps {
     listingId: string;
@@ -15,8 +16,8 @@ interface ReservationFormProps {
 const ReservationForm: React.FC<ReservationFormProps> = ({ listingId }) => {
     const [isReserving, setIsReserving] = React.useState(false);
     const [error, setError] = React.useState<string | null>(null);
-    const [startDate, setStartDate] = React.useState<Date | null>();
-    const [endDate, setEndDate] = React.useState<Date | null>();
+    const [startDate, setStartDate] = React.useState<Date | null>(null);
+    const [endDate, setEndDate] = React.useState<Date | null>(null);
     const [guests, setGuests] = React.useState<number>(1);
 
     async function reserve() {
@@ -52,12 +53,8 @@ const ReservationForm: React.FC<ReservationFormProps> = ({ listingId }) => {
                         id="startDate"
                         selected={startDate}
                         onChange={(date: Date | null) => setStartDate(date)}
-                        selectsStart
-                        startDate={startDate ?? undefined}
-                        endDate={endDate}
-                        showIcon
-                        icon
-                        className="form-control"
+                        minDate={new Date()}
+                        placeholderText="Select start date"
                     />
                 </Col>
             </Row>
@@ -70,13 +67,8 @@ const ReservationForm: React.FC<ReservationFormProps> = ({ listingId }) => {
                         id="endDate"
                         selected={endDate}
                         onChange={(date: Date | null) => setEndDate(date)}
-                        selectsEnd
-                        startDate={startDate ?? undefined}
-                        endDate={endDate}
-                        minDate={startDate}
-                        showIcon
-                        icon
-                        className="form-control"
+                        minDate={startDate || new Date()}
+                        placeholderText="Select end date"
                     />
                 </Col>
             </Row>
@@ -106,7 +98,7 @@ const ReservationForm: React.FC<ReservationFormProps> = ({ listingId }) => {
                     <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
                 ) : (
                     <>
-                        <BsCartPlus size="1.8rem" />
+                        <BsCartPlus size={20} className="me-2" />
                         RESERVE
                     </>
                 )}

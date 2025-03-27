@@ -1,16 +1,22 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
-import * as React from 'react';
+import React from 'react';
 import { Row, Col, Container, InputGroup, FormControl, Card, FormCheck } from 'react-bootstrap';
 import ListingCard from './ListingCard';
 import { BiSearch } from 'react-icons/bi';
 import { XrmContextDataverseClient } from 'dataverse-ify';
 import { contoso_listing } from '../dataverse-gen/entities/contoso_listing';
 import { ListingCardPlaceholder } from './ListingCardPlaceholder';
-import InputRange, { Range } from 'react-input-range';
+import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 import { FeatureLookup, ListingFeatures } from '../model/features';
 import { getListings } from '../api/listingsApi';
+
+interface PriceRange {
+    min: number;
+    max: number;
+}
+
 export interface ListingsProps {
     serviceClient: XrmContextDataverseClient;
 }
@@ -18,7 +24,7 @@ export interface ListingsProps {
 const Listings: React.FC<ListingsProps> = ({ serviceClient }) => {
     const [isLoading, setIsLoading] = React.useState(true);
     const [searchInput, setSearchInput] = React.useState('');
-    const [priceSearch, setPriceSearch] = React.useState<Range>({ min: 400, max: 5000 });
+    const [priceSearch, setPriceSearch] = React.useState<PriceRange>({ min: 400, max: 5000 });
     const [listingData, setListingData] = React.useState<contoso_listing[]>([]);
 
     const getResponse = React.useCallback(async () => {
@@ -52,8 +58,7 @@ const Listings: React.FC<ListingsProps> = ({ serviceClient }) => {
             const { contoso_name, contoso_description, contoso_pricepermonth, contoso_features } = item;
             const selectedFeatures = Object.entries(features)
                 .filter(([, value]) => value)
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                .map(([key]) => (FeatureLookup as any)[key]);
+                .map(([key]) => FeatureLookup[key as keyof typeof FeatureLookup]);
 
             return (
                 (contoso_name?.toLowerCase().includes(searchInput.toLowerCase()) ||
@@ -72,7 +77,7 @@ const Listings: React.FC<ListingsProps> = ({ serviceClient }) => {
                     <Col xs={10} md={4} lg={4} xl={4} className="">
                         <InputGroup className="flex-nowrap">
                             <InputGroup.Text className={'bg-light text-light-primary'}>
-                                <BiSearch size="2rem" />
+                                <BiSearch size={20} aria-hidden={true} />
                             </InputGroup.Text>
                             <FormControl
                                 placeholder="Search"
@@ -88,14 +93,14 @@ const Listings: React.FC<ListingsProps> = ({ serviceClient }) => {
                                 <label>Price/month</label>
                             </Col>
                             <Col xs={6}>
-                                <InputRange
-                                    minValue={400}
-                                    maxValue={5000}
-                                    step={200}
-                                    formatLabel={(value) => `$${value}`}
-                                    value={priceSearch}
-                                    onChange={(value) => setPriceSearch(value as Range)}
-                                />
+                                <div className="input-range-wrapper">
+                                    <InputRange
+                                        maxValue={5000}
+                                        minValue={0}
+                                        value={priceSearch}
+                                        onChange={(value: number | PriceRange) => setPriceSearch(value as PriceRange)}
+                                    />
+                                </div>
                             </Col>
                         </Row>
                     </Col>
@@ -109,8 +114,7 @@ const Listings: React.FC<ListingsProps> = ({ serviceClient }) => {
                                 id={`checkbox-${index}`}
                                 label={feature}
                                 name={feature}
-                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                                checked={(features as any)[feature]}
+                                checked={features[feature as keyof ListingFeatures]}
                                 onChange={handleFeatureChange}
                             />
                         </Col>
