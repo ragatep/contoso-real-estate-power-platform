@@ -22,7 +22,8 @@ namespace PaymentVirtualTableProvider.Tests.IntegrationTests
             // Get the connection string IntegrationTestEnvironment from the app.config file
             var tenantId =
                       System.Configuration.ConfigurationManager.AppSettings["env_contoso_PaymentsApiTenantId"];
-           
+            Console.WriteLine($"Tenant ID loaded: {tenantId}");
+
             // Check that the value is not empty string
             Assert.IsNotNull(tenantId);
             // Check that the user secrets are set - otherwise the value will be **** from the app.config
